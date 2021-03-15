@@ -1,0 +1,186 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{72D0BA1D-636F-46D1-BE07-570B276900CF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Project</RootNamespace>
+    <AssemblyName>Project</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\DAO.cs" />
+    <Compile Include="PL\AccountUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AccountUI.Designer.cs">
+      <DependentUpon>AccountUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\AdminUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\AdminUI.Designer.cs">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\FoodUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\FoodUI.Designer.cs">
+      <DependentUpon>FoodUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\LoginUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\LoginUI.Designer.cs">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\OrderUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\OrderUI.Designer.cs">
+      <DependentUpon>OrderUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\RevenueUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\RevenueUI.Designer.cs">
+      <DependentUpon>RevenueUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\TableUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\TableUI.Designer.cs">
+      <DependentUpon>TableUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="PL\AccountUI.resx">
+      <DependentUpon>AccountUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\AdminUI.resx">
+      <DependentUpon>AdminUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\FoodUI.resx">
+      <DependentUpon>FoodUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\LoginUI.resx">
+      <DependentUpon>LoginUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\OrderUI.resx">
+      <DependentUpon>OrderUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\RevenueUI.resx">
+      <DependentUpon>RevenueUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\TableUI.resx">
+      <DependentUpon>TableUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder_User-green_85406.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\password.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chicken.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chair %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14291991451579780443-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\square_PNG19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BL\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
